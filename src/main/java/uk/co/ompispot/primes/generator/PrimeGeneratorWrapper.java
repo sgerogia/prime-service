@@ -20,7 +20,29 @@ public abstract class PrimeGeneratorWrapper implements PrimeGenerator {
     return primeGenerator;
   }
 
-  public int[] generatePrimes(int limit) {
+  public final int[] generatePrimes(int limit) {
 
+    int[] primes = getCachedPrimes(limit);
+    if (primes == null) {
+      primes = primeGenerator.generatePrimes(limit);
+      cachePrimes(primes, limit);
+    }
+    return primes;
   }
+
+  /**
+   * Get the cached list of primes for this limit.
+   * 
+   * @param limit
+   * @return the list of primes or null if no match cached
+   */
+  protected abstract int[] getCachedPrimes(int limit);
+
+  /**
+   * (Optionally) Cache the list of primes for the given limit.
+   * 
+   * @param primes
+   * @param limit
+   */
+  protected abstract void cachePrimes(int[] primes, int limit);
 }

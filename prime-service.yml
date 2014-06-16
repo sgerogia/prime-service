@@ -1,0 +1,6 @@
+
+# Default prime calculation algorithm
+defaultAlgorithm: Sundaram
+
+# Which caching strategy to use, if at all
+cachingStrategy: DB
