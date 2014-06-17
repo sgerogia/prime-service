@@ -20,4 +20,10 @@ public abstract class BasePrimeGeneratorTest {
 
     assertThat(generator.generatePrimes(0).length, equalTo(0));
   }
+
+  @Test
+  public void shouldReturnEmptyForOne() {
+
+    assertThat(generator.generatePrimes(1).length, equalTo(0));
+  }
 }

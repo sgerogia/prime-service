@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class BasePrimeGenerator implements PrimeGenerator {
 
-  private static final Logger LOG = LoggerFactory.getLogger(PrimeGenerator.LOGGER_NAME);
+  protected static final Logger LOG = LoggerFactory.getLogger(BasePrimeGenerator.class);
 
   @Override
   public final int[] generatePrimes(int limit) {

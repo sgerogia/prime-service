@@ -8,11 +8,6 @@ package uk.co.ompispot.primes.generator;
 public interface PrimeGenerator {
 
   /**
-   * Logger name to be used by all implementation of the class.
-   */
-  static final String LOGGER_NAME = "uk.co.ompispot.primes.generator.PrimeGenerator";
-
-  /**
    * Generate all primes lower or equal to the limit.
    * 
    * @param limit

@@ -1,6 +1,20 @@
 
 # Default prime calculation algorithm
+# See "algorithms" below
 defaultAlgorithm: Sundaram
 
 # Which caching strategy to use, if at all
-cachingStrategy: DB
+# See "cachingStrategies" below
+cachingStrategy: Mem
+
+algorithms:
+- name: Sundaram
+  implClass: uk.co.ompispot.primes.generator.SundaramSieveGenerator
+- name: Eratosthenes
+  implClass: uk.co.ompispot.primes.generator.EratosthenesSieveGenerator
+
+cachingStrategies:
+- name: Mem
+  implClass: uk.co.ompispot.primes.caching.MemoryCache
+- name: Noop
+  implClass:uk.co.ompispot.primes.caching.NoopCache 
