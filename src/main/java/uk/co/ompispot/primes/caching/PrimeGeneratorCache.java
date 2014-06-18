@@ -3,7 +3,7 @@ package uk.co.ompispot.primes.caching;
 import uk.co.ompispot.primes.generator.PrimeGenerator;
 
 /**
- * A cache around a {@link PrimeGenerator}.
+ * A cache around a {@link PrimeGenerator}. All implementations must operate in a multi-threaded environment.
  * 
  * @author sgerogiannakis
  */
