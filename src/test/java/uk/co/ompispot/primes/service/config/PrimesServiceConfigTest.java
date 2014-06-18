@@ -26,7 +26,7 @@ public class PrimesServiceConfigTest {
   @Before
   public void setUp() throws Exception {
 
-    this.yamlFile = new File(Resources.getResource("prime-service.yml").toURI());
+    this.yamlFile = new File(Resources.getResource("primes-service.yml").toURI());
   }
 
   @Test
@@ -34,7 +34,7 @@ public class PrimesServiceConfigTest {
 
     PrimesServiceConfig config = factory.build(yamlFile);
 
-    assertThat(config.getCachingStrategyName(), equalTo("Mem"));
+    assertThat(config.getCachingStrategyName(), equalTo("Noop"));
     assertThat(config.getDefaultAlgorithmName(), equalTo("Sundaram"));
     assertThat(config.getAlgorithms().size(), equalTo(2));
     assertThat(config.getAlgorithms().get("Eratosthenes"),
