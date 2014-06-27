@@ -1,8 +1,6 @@
 Primes service
 ==========
 
-*Coding assignment for major retail bank*
-
 Features
 ---
 * 2 generator implementations, selectable via the optional "algorithm" query param (Sundaram, Eratosthenes)
